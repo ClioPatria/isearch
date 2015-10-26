@@ -49,8 +49,7 @@
 :- use_module(library(semweb/rdf_abstract)).
 :- use_module(library(settings)).
 :- use_module(library(apply)).
-:- use_module(library(jquery), []).	% declaration of jquery resources
-					% from jquery cpack
+:- use_module(library(http/cp_jquery)).
 
 :- use_module(library(search/facet)).
 :- use_module(components(label)).
