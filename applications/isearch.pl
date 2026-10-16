@@ -49,6 +49,7 @@
 :- use_module(library(semweb/rdf_abstract)).
 :- use_module(library(settings)).
 :- use_module(library(apply)).
+:- use_module(library(debug)).
 :- use_module(library(http/cp_jquery)).
 
 :- use_module(library(search/facet)).

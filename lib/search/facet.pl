@@ -42,6 +42,7 @@
 :- use_module(library(lists)).
 :- use_module(library(pairs)).
 :- use_module(library(apply)).
+:- use_module(library(debug)).
 :- use_module(library(semweb/rdf_db)).
 :- use_module(library(semweb/owl_sameas)).
 :- use_module(library(semweb/rdf_label)).
@@ -224,7 +225,7 @@ facet_condition([prop(P, Values)|T], Results, R, (Goal->Rest)) :-
 	->  Goal = (\+ rdf_has(R,P,_))
 	;   Values == ['__single']
 	->  Goal = ( rdf_has(R,P,V),
-	    	     \+ ( rdf_has(R2,P,V),
+		     \+ ( rdf_has(R2,P,V),
 			  memberchk(R2, Results),
 			  R\==R2
 			)
